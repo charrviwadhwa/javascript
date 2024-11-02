@@ -20,3 +20,18 @@ const myfunction = function(){
     
 }
 console.log(typeof myfunction);
+
+
+
+//*****************************************/
+
+//Stack => primitive
+//Heap => non primitive
+
+let obj1={
+    useremail:"heloo@google.com",
+}
+let obj2=obj1
+obj2.useremail="hello@google.com"
+console.log(obj1.useremail);
+console.log(obj2.useremail);
