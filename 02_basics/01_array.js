@@ -16,15 +16,15 @@ const newarr=arr.join()
 // console.log(newarr);
 
 //slics splice
-console.log("A",arr);
+// console.log("A",arr);
 const myn=arr.slice(1,3);
-console.log(myn);
+// console.log(myn);
 
-console.log("b",arr);
+// console.log("b",arr);
 const myn1=arr.splice(1,3)
-console.log("c",arr);
+// console.log("c",arr);
 
-console.log(myn1);
+// console.log(myn1);
 
 
 
