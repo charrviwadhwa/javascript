@@ -24,6 +24,35 @@ function login(username)
     }
     return `${username} logged in`
 }
-console.log(login("joey"));
+// console.log(login("joey"));
 
 
+function price(val1,val2,...num)
+{
+    return num
+}
+console.log(price(100,200,300));
+
+const user={
+    name:"joey",
+    price:100
+}
+function object(any)
+{
+    console.log(`username ${any.name} and price is ${any.price}`);
+    
+}
+// object(user)
+object(
+    {
+        name:"angela",
+        price:200
+    }
+)
+
+const arr=[200,300,400]
+function value(arr)
+{
+    return arr[1]
+}
+console.log(value(arr));
