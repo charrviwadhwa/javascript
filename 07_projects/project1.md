@@ -185,3 +185,58 @@ function newgame(){
 }
 
 ```
+## project 5 (keyboard check)
+
+```javascript
+const insert = document.getElementById('insert')
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML=`
+    <div class = 'color'>
+    <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " " ? "space":e.key}</td>
+    <td>M${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+ 
+</table>
+</div>
+  `
+})
+```
+
+## project 6 (unlimited colors)
+```javascript
+//generate a random color
+const randomcolor = function(){
+  const hex= "0123456789ABCDEF"
+  let color ='#'
+  for(let i=0;i<6;i++)
+  {
+    color+=hex[Math.floor(Math.random()*16)]
+  }
+  return color;
+}
+let intervalid;
+const startcolor = function(){
+  if(!intervalid){
+    intervalid = setInterval(changecolor,1000)
+  }
+  function changecolor(){
+    document.body.style.backgroundColor = randomcolor();
+  }
+ 
+}
+const stopcolor = function(){
+  clearInterval(intervalid)
+  intervalid=null
+}
+
+document.querySelector('#start').addEventListener('click',startcolor)
+document.querySelector('#stop').addEventListener('click',stopcolor)
+```
